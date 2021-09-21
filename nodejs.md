@@ -49,7 +49,7 @@ Change the program so that you can supply a parameter -a to use sync or async to
 
 > Hint: -a as a paramter
 
-## Task 2
+## Task 3
 
 In canvas you can find a zipfile with images, download and extract into the images folder. The name of the files is structured with the following pattern. <photographer>-<location>.jpg. Which is fine if you want to sort the images by photographer.
 
@@ -65,12 +65,12 @@ Example output:
 node pictureSorter.js
 
 ```
-Uhandled files:
+Unhandled files:
   random.jpg
   README.md
 ```
 
-## Task 3
+## Task 4
 
 Write a program that converts a csv-file to a JSON-file.
 
