@@ -59,7 +59,7 @@ Call your program with `node <filename>` and the program should then put each ph
 
 For example: the joe-berlin.jpg and frank.berlin.jpg should be copied into a folder named berlin, joe-paris.jpg and mary-paris.jpg should be copied into a folder named paris.
 
-The program should print out a list of files that did'nt fit the format in the end.
+The program should print out a list of files that didn't fit the format in the end.
 
 Example output:
 node pictureSorter.js
