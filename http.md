@@ -73,3 +73,42 @@ You should always return something, i.e call `res.end(...)` so the server at lea
 The function in the previous task answer the same unrelated what HTTP-method that is used. Refactor the function so that it will respond the same way when using a GET-request. If it's not a GET method, make sure the server respond with a "Method not allowed" response and the status code 405.
 
 The browser will always send a GET-request, to test other method you can use [Postman](https://www.postman.com/downloads/), curl or [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+
+### 4.
+
+In the previous task where we responded with "Hello World" when calling http://localhost:3000/hello we should now be able to take in a GET-parameter with the help of a query-string. A querystring always starts with a ? after the address, and then its based of key/value parameters. Like the following: http://localhost:3000/hello**?**key=value and it uses a & to separate key/values. http://localhost:3000/hello?name=thomas&age=42
+
+Make it so that if we requesting http://localhost:3000/hello?name=Thomas the server will respond with the text "Hello Thomas" instead of "Hello world".
+
+To read the url, you can use the following code.
+
+```javascript
+const url = new URL(req.url, `http://${req.headers.host}`);
+const queryString = url.searchParams;
+```
+
+### 5.
+
+Create a new "endpoint" http://localhost:3000/pics that returns a json response containing an array with the files inside the image folder from earlier exercises.
+
+You'll need to add headers here to tell the browser that the response will be in json.
+
+```
+  res.setHeader(...);
+  const jsonFiles = JSON.stringify(files);
+  res.end(...);
+```
+
+### 5.2 (Bonus)
+
+Make it so we can "filter" http://localhost:3000/pics with a queryString that only shows files that matches the path.
+
+So the pattern will be http://localhost:3000/pics/[city]
+
+Example: http://localhost:3000/pics/berlin/ should only show files from berlin.
+
+Response:
+
+```json
+["frank-berlin.jpg", "joe-berlin.jpg", "mary-berlin.jpg"]
+```
