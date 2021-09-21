@@ -28,6 +28,8 @@ If you tell the server that you're **Accept** `text/html` you will get a html-re
 
 Try to get some different responses with the accept header.
 
+To add a header, have a -H "headerinformation" to the curl program.
+
 Example:
 
 ```http
