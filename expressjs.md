@@ -16,7 +16,7 @@ Import expressjs as following
 const express = require("express");
 const app = express();
 
-app.all((req, res) => {
+app.all("/", (req, res) => {
   res.send("Hello world");
 });
 //Add routes
