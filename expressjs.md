@@ -103,3 +103,38 @@ Tell expressjs to serve static files from the images folder with the help of exp
 Since you have a json-file ready with persons from a earlier exercise, copy that file into the same directory as the express project.
 
 Create a GET endpoint `/users/` that returns the content of the file as a json response.
+
+Make sure that you don't have to read the file from disk every time a request to `/users` is made. There are serveral ways to solve this, think about a solution and ask the theacher if you get stuck or want to reflect on your solution.
+
+## Get the users again
+
+Add another endpoint `/users/:name` that takes an argument :name that you use to filter the users data. Respond with a JSON-array that only contains the names that matches the :name parameter.
+
+## Add to the users
+
+Create a new POST endpoint `/users` that can recieve a new user. So if a user of your API calls `/users` with the POST method and the BODY contains a name and email you'll add it to your users data.
+
+Example:
+
+```console
+POST /users HTTP/1.1
+Host: localhost:3000
+User-Agent: curl/7.55.1
+Accept: */*
+
+name=Ford Prefect&email=ford@prefect.com
+```
+
+### Bonus: Add with JSON
+
+Add the possibility that if the user defines the Content-Type: application/json the endpoint reads the JSON body instead of using post data.
+
+> Hint: look at the express.json() middleware.
+
+```javascript
+app.use(express.json()); // for parsing application/json
+app.use(express.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.post("/", (req, res) => {
+  console.log(req.body);
+});
+```
