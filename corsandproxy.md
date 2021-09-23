@@ -31,6 +31,8 @@ Make sure to cache the prizes since the file is quite big.
 
 Next step is to add a search param for the `/prizes` endpoint, so if a user requests your api with `/prizes/[year]` your should respond with only data from that year.
 
+Next step is to add other ways to "filter" the data.
+
 ## Get users from github
 
 We can fetch information about users from github in JSON-format. The endpoint is https://api.github.com/users/[user]
@@ -40,6 +42,12 @@ Create a endpoint/route in your api to get user information. eg `app.get("/git/:
 Create a good data type (object) to store fetch data about each user that gets requested so we don't have to call the github-api if we allready fetched that user.
 
 Explore what other endpoints you could call for a user and add endpoints to your project.
+
+## Create a web page that fetches data
+
+Since your project now has a lot of endpoints we can explore, why not make a web page that let us browse different end points and fetch data from it.
+
+Use bootstrap or create a web page from scratch that have a user interface that let's the visitor use all the endpoints you've created.
 
 ## Ok, now what?
 
