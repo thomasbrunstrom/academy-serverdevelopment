@@ -49,7 +49,7 @@ _Bonus: Explore what other endpoints you could call for a user and add endpoints
 
 ---
 
-## Create a "phonebook" with all your friends
+## REST API - Create a "phonebook" with all your friends
 
 Create some endpoints in your project to handle all your friends.
 
