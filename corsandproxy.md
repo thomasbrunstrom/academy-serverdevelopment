@@ -82,6 +82,8 @@ Use for instance Postman to test your routes.
 
 _Bonus: Add a persistent data store for you friends, so even if the server is restared your list of friends is still there._
 
+_Bonus 2: Use [multer-middleware](http://expressjs.com/en/resources/middleware/multer.html) to be able to upload an image for each of your friends._
+
 ---
 
 ## Create a web page that fetches data
